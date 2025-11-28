@@ -3,9 +3,9 @@ import { Menu, X } from "lucide-react";
 
 export const Navbar = () => {
     // State Variable
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-    const [hidden, setHidden] = useState(false);
+    const [ menuOpen, setMenuOpen ] = useState(false);
+    const [ scrolled, setScrolled ] = useState(false);
+    const [ hidden, setHidden ] = useState(false);
 
     useEffect(() => {
         if (!menuOpen) return;
@@ -17,10 +17,10 @@ export const Navbar = () => {
         };
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
-    }, [menuOpen])
+    }, [ menuOpen ])
         ;
 
-    const isActive = (path: string) => {
+    const isActive = (path) => {
         if (typeof window !== "undefined") {
             const current = window.location.pathname;
             if (path === "/") {
@@ -31,7 +31,7 @@ export const Navbar = () => {
         return false;
     };
 
-    const navbarClass = ["fixed top-0 left-0 w-full z-50 flex h-16 items-center justify-between gap-6 px-6 sm:px-10 transition-all duration-500",
+    const navbarClass = [ "fixed top-0 left-0 w-full z-50 flex h-16 items-center justify-between gap-6 px-6 sm:px-10 transition-all duration-500",
         scrolled ? "backdrop-blur-lg bg-[#1C1B1C]/50 shadow-lg" : "bg-transparent",
         hidden ? "opacity-0 pointer-events-none" : "opacity-100"
     ].join(" ");
