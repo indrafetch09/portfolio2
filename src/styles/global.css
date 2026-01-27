@@ -1,30 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap');
 @import "tailwindcss";
+
+:root {
+  --bg-main: #2d353b;
+  --bg-panel: #363e42;
+  --border: #454e4d;
+
+  --accent: #a4bd7e;
+  --accent-soft: #98af78;
+  --accent-muted: #7f8f6a;
+
+  --text-main: #e0e0d0;
+  --text-secondary: #b8c0a0;
+  --text-muted: #666960;
+}
 
 
 body {
-  font-family: "Public Sans", system-ui, sans-serif;
-  line-height: 1.5;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
 
-  color-scheme: light dark;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  background-color: #1C1B1C;
+  background-color: var(--bg-main);
 
 }
 
 #typed {
-  font-family: Inter, "Noto Sans", "Noto Sans JP", "Noto Sans Arabic", "Noto Sans KR", sans-serif;
+  font-family: Inter, monospace;
 }
 
-@media (max-width: 768px){
+@media (max-width: 700px){
   .container {
-  max-width: 768px;
+  max-width: 700px;
   }
 
 }

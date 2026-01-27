@@ -1,4 +1,6 @@
 ---
+import { Terminal } from "lucide-react";
+
 // Logic untuk menentukan tautan aktif
 const isActive = (path: string) => {
   const current = Astro.url.pathname;
@@ -16,10 +18,11 @@ const isActive = (path: string) => {
   <div
     class="flex cursor-pointer text-2xl align-items-center text-[#a0a0a0] font-semibold">
     <a href="/">
-      <span class="font-semibold text-white px-3 py-3">Indra </span>
+      <Terminal size={32} color="white" />
     </a>
   </div>
 
+  <!-- Navbar -->
   <nav class="hidden font-light md:flex gap-6 items-center text-m">
     <ul class="flex gap-6">
       <li>
@@ -37,11 +40,11 @@ const isActive = (path: string) => {
         <a
           class:list={[
             "transition duration-300 px-3 py-2 rounded-full hover:bg-[#3a3a3a] hover:text-white",
-            { "text-white": isActive("/resume") },
-            { "text-[#a0a0a0]": !isActive("/resume") },
+            { "text-white": isActive("/about") },
+            { "text-[#a0a0a0]": !isActive("/about") },
           ]}
-          href="/resume">
-          Resume
+          href="/about">
+          About
         </a>
       </li>
       <li>
@@ -117,6 +120,7 @@ const isActive = (path: string) => {
     </svg>
   </button>
 
+  <!-- Mobile Nav -->
   <nav
     id="mobile-nav"
     class="fixed top-16 left-0 right-0 font-light bg-[#363636] p-6 md:hidden rounded-b-xl transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none">
@@ -134,11 +138,11 @@ const isActive = (path: string) => {
       <li>
         <a
           class:list={[
-            { "text-white": isActive("/resume") },
-            { "text-[#a0a0a0]": !isActive("/resume") },
+            { "text-white": isActive("/about") },
+            { "text-[#a0a0a0]": !isActive("/about") },
           ]}
-          href="/Resume"
-          id="mobile-link-resume">Resume</a
+          href="/about"
+          id="mobile-link-about">About</a
         >
       </li>
       <li>

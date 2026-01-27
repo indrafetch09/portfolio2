@@ -3,13 +3,17 @@
 import Navbar from "../components/Navbar.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Footer from "../components/Footer.astro";
+import EverforestBg from "../assets/foggy_valley_2.png";
+
+const backgroundUrl = `url(${EverforestBg.src})`;
 ---
 
-<MainLayout title="Harindra Wahyu Arifudin" , description="This is home page">
+<MainLayout title="Harindra Wahyu" , description="This is home page">
   <!-- <Navbar client:load /> -->
   <Navbar client:load />
-  <section class="relative min-h-screen text-white flex flex-col pt-16">
+  <section class="relative h-screen text-white flex flex-col pt-16">
     <div
+      style={`background-image: ${backgroundUrl};`}
       class="flex-grow flex flex-col items-center justify-center text-center px-4">
       <!-- Greeting -->
       <div class="text-center mb-2">
@@ -35,7 +39,7 @@ import Footer from "../components/Footer.astro";
       <!-- Button -->
       <div class="flex justify-center mt-6">
         <a
-          href="/resume"
+          href="/project"
           class="rounded-xl py-2 px-5 text-m text-black bg-white hover:text-[#b8b8b8] transition duration-300"
           >Discover</a
         >
