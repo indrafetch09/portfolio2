@@ -41,8 +41,7 @@ export const Navbar = () => {
         <header className={navbarClass}>
             <div className="flex cursor-pointer text-2xl align-items-center text-[#a0a0a0] font-semibold">
                 <a href="/">
-                    <span className="font-semibold text-white px-3 py-3">Kaiden.
-                        <span className="text-[#a0a0a0]">dev</span>
+                    <span className="font-semibold text-white px-3 py-3">Indra
                     </span>
                 </a>
             </div>

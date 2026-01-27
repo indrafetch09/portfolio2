@@ -11,12 +11,10 @@ const isActive = (path: string) => {
 
 <header
   id="navbar-header"
-  class="astronav-sticky-header fixed top-0 left-0 w-full z-50 flex h-16 items-center justify-between gap-6 px-6 sm:px-10 transition-all duration-500 bg-transparent"
->
+  class="astronav-sticky-header fixed top-0 left-0 w-full z-50 flex h-16 items-center justify-between gap-6 px-6 sm:px-10 transition-all duration-500 bg-transparent">
   <!-- Logo -->
   <div
-    class="flex cursor-pointer text-2xl align-items-center text-[#a0a0a0] font-semibold"
-  >
+    class="flex cursor-pointer text-2xl align-items-center text-[#a0a0a0] font-semibold">
     <a href="/">
       <span class="font-semibold text-white px-3 py-3">Indra </span>
     </a>
@@ -31,8 +29,7 @@ const isActive = (path: string) => {
             { "text-white": isActive("/") },
             { "text-[#a0a0a0]": !isActive("/") },
           ]}
-          href="/"
-        >
+          href="/">
           Home
         </a>
       </li>
@@ -43,8 +40,7 @@ const isActive = (path: string) => {
             { "text-white": isActive("/resume") },
             { "text-[#a0a0a0]": !isActive("/resume") },
           ]}
-          href="/resume"
-        >
+          href="/resume">
           Resume
         </a>
       </li>
@@ -55,8 +51,7 @@ const isActive = (path: string) => {
             { "text-white": isActive("/project") },
             { "text-[#a0a0a0]": !isActive("/project") },
           ]}
-          href="/project"
-        >
+          href="/project">
           Project
         </a>
       </li>
@@ -67,8 +62,7 @@ const isActive = (path: string) => {
             { "text-white": isActive("/contact") },
             { "text-[#a0a0a0]": !isActive("/contact") },
           ]}
-          href="/contact"
-        >
+          href="/contact">
           Contact
         </a>
       </li>
@@ -78,8 +72,7 @@ const isActive = (path: string) => {
             "transition duration-300 py-2 px-4 rounded-xl text-black bg-white hover:text-[#b8b8b8]",
             { "text-[#b8b8b8]": isActive("/blog") },
           ]}
-          href="/blog"
-        >
+          href="/blog">
           Blog
         </a>
       </li>
@@ -89,8 +82,7 @@ const isActive = (path: string) => {
   <button
     id="mobile-menu-btn"
     class="cursor-pointer md:hidden py-2 px-2 text-2xl z-50"
-    aria-label="Toggle menu"
-  >
+    aria-label="Toggle menu">
     <svg
       id="menu-icon"
       xmlns="http://www.w3.org/2000/svg"
@@ -102,8 +94,7 @@ const isActive = (path: string) => {
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="lucide lucide-menu"
-    >
+      class="lucide lucide-menu">
       <line x1="4" x2="20" y1="12" y2="12"></line><line
         x1="4"
         x2="20"
@@ -121,16 +112,14 @@ const isActive = (path: string) => {
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="lucide lucide-x hidden"
-    >
+      class="lucide lucide-x hidden">
       <path d="M18 6 6 18"></path><path d="m6 6 12 12"></path>
     </svg>
   </button>
 
   <nav
     id="mobile-nav"
-    class="fixed top-16 left-0 right-0 font-light bg-[#363636] p-6 md:hidden rounded-b-xl transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none"
-  >
+    class="fixed top-16 left-0 right-0 font-light bg-[#363636] p-6 md:hidden rounded-b-xl transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none">
     <ul class="flex flex-col gap-6 text-2xl">
       <li>
         <a
@@ -179,12 +168,12 @@ const isActive = (path: string) => {
 <script>
   const header = document.getElementById("navbar-header") as HTMLElement | null;
   const mobileMenuBtn = document.getElementById(
-    "mobile-menu-btn"
+    "mobile-menu-btn",
   ) as HTMLButtonElement | null;
   const mobileNav = document.getElementById("mobile-nav") as HTMLElement | null;
   const menuIcon = document.getElementById("menu-icon") as SVGSVGElement | null;
   const closeIcon = document.getElementById(
-    "close-icon"
+    "close-icon",
   ) as SVGSVGElement | null;
 
   let menuOpen = false;
@@ -197,7 +186,7 @@ const isActive = (path: string) => {
       mobileNav.classList.remove(
         "-translate-y-full",
         "opacity-0",
-        "pointer-events-none"
+        "pointer-events-none",
       );
       mobileNav.classList.add("translate-y-0", "opacity-100");
       menuIcon.classList.add("hidden");
@@ -207,7 +196,7 @@ const isActive = (path: string) => {
       mobileNav.classList.add(
         "-translate-y-full",
         "opacity-0",
-        "pointer-events-none"
+        "pointer-events-none",
       );
       menuIcon.classList.remove("hidden");
       closeIcon.classList.add("hidden");
@@ -230,7 +219,7 @@ const isActive = (path: string) => {
       header.classList.remove(
         "backdrop-blur-lg",
         "bg-[#1C1B1C]/50",
-        "shadow-lg"
+        "shadow-lg",
       );
     }
     // Menyembunyikan/menampilkan header saat di-scroll lebih jauh
