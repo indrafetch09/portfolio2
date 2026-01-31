@@ -167,16 +167,12 @@ const isActive = (path: string) => {
   </nav>
 </header>
 
-<script>
-  const header = document.getElementById("navbar-header") as HTMLElement | null;
-  const mobileMenuBtn = document.getElementById(
-    "mobile-menu-btn",
-  ) as HTMLButtonElement | null;
-  const mobileNav = document.getElementById("mobile-nav") as HTMLElement | null;
-  const menuIcon = document.getElementById("menu-icon") as SVGSVGElement | null;
-  const closeIcon = document.getElementById(
-    "close-icon",
-  ) as SVGSVGElement | null;
+<script lang="ts">
+  const header = document.getElementById("navbar-header");
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const mobileNav = document.getElementById("mobile-nav");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
 
   let menuOpen = false;
 
