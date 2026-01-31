@@ -13,7 +13,10 @@ const backgroundUrl = `url(${EverforestBg.src})`;
   <Navbar />
   <section class="h-screen text-white flex flex-col">
     <div
-      style={`background-image: ${backgroundUrl};`}
+      style={`
+      background-image: ${backgroundUrl};
+      background-size: cover;
+      `}
       class="flex-grow flex flex-col items-center justify-center text-center px-4">
       <!-- Greeting -->
       <!-- <div class="text-center mb-2">

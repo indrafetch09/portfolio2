@@ -1,14 +1,20 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
 @import "tailwindcss";
 
 :root {
   --bg-main: #2d353b;
+  --bg-panel: #2f383e;
+  --bg-hover: #20262a;
   --bg-panel: #363e42;
   --border: #454e4d;
+
+  --hover-muted: #888373;
 
   --accent: #a4bd7e;
   --accent-soft: #98af78;
   --accent-muted: #7f8f6a;
-
+  
+  --text-accent: #a0a0a0;
   --text-main: #e0e0d0;
   --text-secondary: #b8c0a0;
   --text-muted: #666960;
