@@ -2,6 +2,7 @@
 // import { Navbar } from "../components/Navbar";
 import Navbar from "../components/Navbar.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import TerminalPanel from "../components/TerminalPanel.astro";
 import Footer from "../components/Footer.astro";
 import EverforestBg from "../assets/fog_forest_alt_2.webp";
 
@@ -16,6 +17,7 @@ const backgroundUrl = `url(${EverforestBg.src})`;
       style={`
       background-image: ${backgroundUrl};
       background-size: cover;
+      filter: blur(4px);
       `}
       class="flex-grow flex flex-col items-center justify-center text-center px-4">
       <!-- Greeting -->
@@ -48,8 +50,8 @@ const backgroundUrl = `url(${EverforestBg.src})`;
         >
       </div> -->
     </div>
+    <TerminalPanel />
   </section>
-
   <!-- <script>
     import Typed from "typed.js";
 

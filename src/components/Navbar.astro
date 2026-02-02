@@ -1,5 +1,5 @@
 ---
-import { Terminal } from "lucide-react";
+// import { Terminal } from "lucide-react";
 
 const isActive = (path: string) => {
   const current = Astro.url.pathname;
@@ -12,22 +12,22 @@ const isActive = (path: string) => {
 
 <header
   id="navbar-header"
-  class="astronav-sticky-header flex flex-row fixed bg-(--bg-main) gap-6 top-0 left-0 w-full z-20 h-10 items-center px-8 sm:px-3 transition-all duration-500">
+  class="astronav-sticky-header flex flex-row fixed bg-(--bg-main) gap-6 top-0 left-0 w-full z-20 h-12 items-center justify-between px-8 sm:px-3 transition-all duration-500">
   <div
     class="title flex cursor-pointer text-2xl align-items-center bg-transparent font-bold">
     <a href="/">
-      <Terminal size={25} color="white" />
+      <!-- <Terminal size={25} color="white" /> -->
     </a>
   </div>
 
   <!-- Navbar -->
-  <nav class="container flex mx-60 justify-center px-3 py-2">
-    <div class="navbar hidden font-light md:flex items-center text-m">
+  <nav class="container flex mx-auto justify-center">
+    <div class="navbar hidden font-bold md:flex items-center text-m">
       <ul class="flex gap-1">
         <li>
           <a
             class:list={[
-              "transition duration-300 px-3 py-2 rounded-sm rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
+              "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
               { "bg-(--hover-muted)": isActive("/") },
               { "text-(--hover-muted)": !isActive("/") },
               { "bg-(--bg-panel)": !isActive("/") },
@@ -39,7 +39,7 @@ const isActive = (path: string) => {
         <li>
           <a
             class:list={[
-              "transition duration-300 px-3 py-2 rounded-sm rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
+              "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
               { "bg-(--hover-muted)": isActive("/about") },
               { "text-(--hover-muted)": !isActive("/about") },
               { "bg-(--bg-panel)": !isActive("/about") },
@@ -51,7 +51,7 @@ const isActive = (path: string) => {
         <li>
           <a
             class:list={[
-              "transition duration-300 px-3 py-2 rounded-sm rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
+              "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
               { "bg-(--hover-muted)": isActive("/project") },
               { "text-(--hover-muted)": !isActive("/project") },
               { "bg-(--bg-panel)": !isActive("/project") },
@@ -63,7 +63,7 @@ const isActive = (path: string) => {
         <li>
           <a
             class:list={[
-              "transition duration-300 px-3 py-2 rounded-sm rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
+              "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
               { "bg-(--hover-muted)": isActive("/contact") },
               { "text-(--hover-muted)": !isActive("/contact") },
               { "bg-(--bg-panel)": !isActive("/contact") },
@@ -75,13 +75,12 @@ const isActive = (path: string) => {
         <li>
           <a
             class:list={[
-              "transition duration-300 px-3 py-2 rounded-sm rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
-              { "bg-(--hover-muted)": isActive("/blog") },
-              { "text-(--hover-muted)": !isActive("/blog") },
-              { "bg-(--bg-panel)": !isActive("/blog") },
+              "transition duration-300 px-3 py-2  rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
+              { "text-(--bg-panel)": !isActive("/blog") },
+              { "bg-(--hover-muted)": !isActive("/blog") },
             ]}
             href="/blog">
-            Blog
+            Blog ->
           </a>
         </li>
       </ul>
