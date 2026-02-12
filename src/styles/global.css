@@ -1,7 +1,8 @@
-@import "https://www.nerdfonts.com/assets/css/webfont.css";
 @import "tailwindcss";
 
 :root {
+  @import "https://www.nerdfonts.com/assets/css/webfont.css";
+ 
   --bg-main: #2d353b;
   --bg-panel: #2f383e;
   --bg-hover: #20262a;

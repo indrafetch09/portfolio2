@@ -10,57 +10,19 @@ const backgroundUrl = `url(${EverforestBg.src})`;
 ---
 
 <MainLayout title="Harindra Wahyu" , description="This is home page">
-  <!-- <Navbar client:load /> -->
   <Navbar />
-  <section class="h-screen text-white flex flex-col">
+  <section class="relative h-screen text-white flex flex-col">
     <div
       style={`
       background-image: ${backgroundUrl};
       background-size: cover;
       filter: blur(4px);
       `}
-      class="flex-grow flex flex-col items-center justify-center text-center px-4">
-      <!-- Greeting -->
-      <!-- <div class="text-center mb-2">
-        <span
-          id="typed"
-          class="text-gray-400 text-2xl sm:text-xl md:text-2xl mb-4">
-        </span>
-      </div> -->
-
-      <!-- Nama -->
-      <!-- <h1 class="flex text-center font-bold text-white text-3xl sm:text-5xl">
-        <span class="flex sm:text-5xl font-light text-gray-300 pr-3">
-          I'm
-        </span>
-        Harindra Wahyu
-      </h1> -->
-
-      <!-- Subtitle -->
-      <!-- <p class="flex mt-2 text-center text-lg text-[#a0a0a0]">
-        Full Stack Web Developer.
-      </p> -->
-
-      <!-- Button -->
-      <!-- <div class="flex justify-center mt-6">
-        <a
-          href="/project"
-          class="rounded-xl py-2 px-5 text-m text-black bg-white hover:text-[#b8b8b8] transition duration-300"
-          >Discover</a
-        >
-      </div> -->
+      class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
     </div>
-    <TerminalPanel />
-  </section>
-  <!-- <script>
-    import Typed from "typed.js";
 
-    new Typed("#typed", {
-      strings: ["Assalamu'alaiakum,", "Hola,", "Hello,", "こんにちは,"],
-      typeSpeed: 30,
-      backSpeed: 50,
-      loop: true,
-    });
-  </script> -->
-  <!-- <Footer /> -->
+    <div class="relative flex z-10 items-center justify-center">
+      <TerminalPanel />
+    </div>
+  </section>
 </MainLayout>
