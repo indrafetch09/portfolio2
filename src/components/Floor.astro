@@ -1,0 +1,14 @@
+---
+import EverforestBg from "../assets/fog_forest_alt_2.webp";
+
+const backgroundUrl = `url(${EverforestBg.src})`;
+---
+
+<div
+  style={`
+      background-image: ${backgroundUrl};
+      background-size: cover;
+      filter: blur(4px);
+      `}
+  class="floor absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+</div>

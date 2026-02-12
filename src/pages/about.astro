@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Navbar from "../components/Navbar.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Footer from "../components/Footer.astro";
+import Floor from "../components/Floor.astro";
 import profileImg from "../assets/Indra.webp";
 
 const skills = [
@@ -17,10 +18,6 @@ const skills = [
 
 <MainLayout title="About | Harindra Wahyu" , description="This is resume page">
   <Navbar />
-  <!-- <main class="flex items-center justify-center min-h-screen text-center pt-16">
-    <h1 class="text-white text-5xl font-bold">This is About</h1>
-  </main> -->
-
   <main class="container mx-auto p-8 max-w-4xl">
     <div
       class="flex flex-col items-center justify-center text-center space-y-8">
@@ -66,4 +63,5 @@ const skills = [
     </div>
   </main>
   <Footer />
+  <!-- <Floor /> -->
 </MainLayout>
