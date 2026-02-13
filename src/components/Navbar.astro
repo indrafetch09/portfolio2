@@ -19,70 +19,68 @@ const isActive = (path: string) => {
   </div>
 
   <!-- Navbar -->
-  <nav class="container flex mx-auto justify-center">
-    <div class="navbar hidden md:flex items-center text-m">
-      <ul class="flex gap-1">
-        <li>
-          <a
-            class:list={[
-              "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
-              { "bg-(--hover-muted)": isActive("/") },
-              { "text-(--hover-muted)": !isActive("/") },
-              { "bg-(--bg-panel)": !isActive("/") },
-            ]}
-            href="/">
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            class:list={[
-              "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
-              { "bg-(--hover-muted)": isActive("/about") },
-              { "text-(--hover-muted)": !isActive("/about") },
-              { "bg-(--bg-panel)": !isActive("/about") },
-            ]}
-            href="/about">
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            class:list={[
-              "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
-              { "bg-(--hover-muted)": isActive("/project") },
-              { "text-(--hover-muted)": !isActive("/project") },
-              { "bg-(--bg-panel)": !isActive("/project") },
-            ]}
-            href="/project">
-            Project
-          </a>
-        </li>
-        <li>
-          <a
-            class:list={[
-              "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
-              { "bg-(--hover-muted)": isActive("/contact") },
-              { "text-(--hover-muted)": !isActive("/contact") },
-              { "bg-(--bg-panel)": !isActive("/contact") },
-            ]}
-            href="/contact">
-            Contact
-          </a>
-        </li>
-        <li>
-          <a
-            class:list={[
-              "transition duration-300 px-3 py-2  rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
-              { "text-(--bg-panel)": !isActive("/blog") },
-              { "bg-(--hover-muted)": !isActive("/blog") },
-            ]}
-            href="/blog">
-            Blog ->
-          </a>
-        </li>
-      </ul>
-    </div>
+  <nav class="navbar hidden md:flex items-center text-m">
+    <ul class="flex gap-1">
+      <li>
+        <a
+          class:list={[
+            "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
+            { "bg-(--hover-muted)": isActive("/") },
+            { "text-(--hover-muted)": !isActive("/") },
+            { "bg-(--bg-panel)": !isActive("/") },
+          ]}
+          href="/">
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          class:list={[
+            "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
+            { "bg-(--hover-muted)": isActive("/about") },
+            { "text-(--hover-muted)": !isActive("/about") },
+            { "bg-(--bg-panel)": !isActive("/about") },
+          ]}
+          href="/about">
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          class:list={[
+            "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
+            { "bg-(--hover-muted)": isActive("/project") },
+            { "text-(--hover-muted)": !isActive("/project") },
+            { "bg-(--bg-panel)": !isActive("/project") },
+          ]}
+          href="/project">
+          Project
+        </a>
+      </li>
+      <li>
+        <a
+          class:list={[
+            "transition duration-300 px-3 py-2 rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
+            { "bg-(--hover-muted)": isActive("/contact") },
+            { "text-(--hover-muted)": !isActive("/contact") },
+            { "bg-(--bg-panel)": !isActive("/contact") },
+          ]}
+          href="/contact">
+          Contact
+        </a>
+      </li>
+      <li>
+        <a
+          class:list={[
+            "transition duration-300 px-3 py-2  rounded-sm text-(--bg-panel) bg-(--bg-panel) hover:bg-(--hover-muted) hover:text-(--bg-main)",
+            { "text-(--bg-panel)": !isActive("/blog") },
+            { "bg-(--hover-muted)": !isActive("/blog") },
+          ]}
+          href="/blog">
+          Blog ->
+        </a>
+      </li>
+    </ul>
   </nav>
 
   <button
@@ -126,13 +124,13 @@ const isActive = (path: string) => {
   <!-- Mobile Nav -->
   <nav
     id="mobile-nav"
-    class="fixed top-16 left-0 right-0 font-light bg-[#363636] p-6 md:hidden rounded-b-xl transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none">
+    class="fixed top-10 left-0 right-0 font-light bg-(--bg-main) p-6 md:hidden rounded-b-xl transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none">
     <ul class="flex flex-col gap-6 text-2xl">
       <li>
         <a
           class:list={[
-            { "text-white": isActive("/") },
-            { "text-[#a0a0a0]": !isActive("/") },
+            { "text-(--text-accent-yellow)": isActive("/") },
+            { "text-(--text-muted)": !isActive("/") },
           ]}
           href="/"
           id="mobile-link-home">Home</a
@@ -141,8 +139,8 @@ const isActive = (path: string) => {
       <li>
         <a
           class:list={[
-            { "text-white": isActive("/about") },
-            { "text-[#a0a0a0]": !isActive("/about") },
+            { "text-(--text-accent-yellow)": isActive("/about") },
+            { "text-(--text-muted)": !isActive("/about") },
           ]}
           href="/about"
           id="mobile-link-about">About</a
@@ -151,8 +149,8 @@ const isActive = (path: string) => {
       <li>
         <a
           class:list={[
-            { "text-white": isActive("/project") },
-            { "text-[#a0a0a0]": !isActive("/project") },
+            { "text-(--text-accent-yellow)": isActive("/project") },
+            { "text-(--text-muted)": !isActive("/project") },
           ]}
           href="/project"
           id="mobile-link-project">Project</a
@@ -161,8 +159,8 @@ const isActive = (path: string) => {
       <li>
         <a
           class:list={[
-            { "text-white": isActive("/contact") },
-            { "text-[#a0a0a0]": !isActive("/contact") },
+            { "text-(--text-accent-yellow)": isActive("/contact") },
+            { "text-(--text-muted)": !isActive("/contact") },
           ]}
           href="/contact"
           id="mobile-link-contact">Contact</a

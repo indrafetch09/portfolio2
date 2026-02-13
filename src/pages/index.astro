@@ -7,11 +7,43 @@ import Floor from "../components/Floor.astro";
 ---
 
 <MainLayout title="Harindra Wahyu" , description="This is home page">
+  <Floor class="absolute inset-0 z-0" />
   <Navbar />
-  <Floor />
-  <section class="relative h-screen text-white flex flex-col">
-    <div class="relative flex z-10 items-center justify-center">
-      <TerminalPanel />
-    </div>
-  </section>
+  <main class="h-screen flex flex-col items-center justify-center mt-30 py-20">
+    <TerminalPanel>
+      <div
+        class="self-center h-full flex flex-col items-center justify-content-center">
+        <div class="text-center mb-2">
+          <span
+            id="typed"
+            class="text-(--text-main) text-2xl sm:text-xl md:text-2xl mb-4">
+          </span>
+        </div>
+
+        <h1
+          class="flex text-center font-bold text-(--text-main) text-3xl sm:text-5xl">
+          <span
+            class="flex sm:text-5xl font-light text-(--text-accent-green) pr-3">
+            I'm
+          </span>
+          Harindra Wahyu
+        </h1>
+
+        <p class="flex mt-2 text-center text-lg text-(--text-accent-purple)">
+          Full Stack Web Developer.
+        </p>
+      </div>
+
+      <script>
+        import Typed from "typed.js";
+
+        new Typed("#typed", {
+          strings: ["Assalamu'alaiakum,", "Hola,", "Hello,", "こんにちは,"],
+          typeSpeed: 30,
+          backSpeed: 50,
+          loop: true,
+        });
+      </script>
+    </TerminalPanel>
+  </main>
 </MainLayout>

@@ -6,7 +6,9 @@
   --bg-main: #2d353b;
   --bg-panel: #2f383e;
   --bg-hover: #20262a;
-  --border: #454e4d;
+
+  --border: #626059;
+  --border-active: #79a8a2;
 
   --hover-muted: #888373;
 
@@ -14,12 +16,17 @@
   --accent-soft: #98af78;
   --accent-muted: #7f8f6a;
   
-  --text-main: #e0e0d0;
+  --text-main: #c7baa1;
   --text-secondary: #b8c0a0;
-  --text-accent: #a0a0a0;
+
+  --text-accent-green: #a4bd7e;
+  --text-accent-purple: #a47497;
+  --text-accent-blue: #4a7773;
+  --text-accent-tosca: #7b9f8a;
+  --text-accent-yellow: #cbb68b;
+  --text-accent-red: #ca7777;
   --text-muted: #666960;
 }
-
 
 body {
   font-family: "JetBrains Mono", monospace;
