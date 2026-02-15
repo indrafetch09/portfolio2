@@ -4,7 +4,9 @@ import Navbar from "../components/Navbar.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Footer from "../components/Footer.astro";
 import Floor from "../components/Floor.astro";
+import TerminalPanel from "../components/TerminalPanel.astro";
 import profileImg from "../assets/Indra.webp";
+import { Terminal } from "lucide-react";
 
 const skills = [
   { name: "UI/UX Design", icon: "", color: "" },
@@ -18,50 +20,53 @@ const skills = [
 
 <MainLayout title="About | Harindra Wahyu" , description="This is resume page">
   <Navbar />
-  <main class="container mx-auto p-8 max-w-4xl">
-    <div
-      class="flex flex-col items-center justify-center text-center space-y-8">
-      <div class="flex flex-col items-center space-y-4 mt-15">
-        <!-- img -->
-        <Image
-          src={profileImg}
-          alt="Harindra With Suit"
-          class="w-52 h-52 rounded-full object-cover shadow-lg"
-        />
+  <Floor />
+  <main
+    class="container flex mx-auto py-20 h-screen justify-center items-center">
+    <TerminalPanel>
+      <div
+        class="flex flex-col items-center justify-center text-center space-y-8">
+        <div class="flex flex-col items-center space-y-4 mt-15">
+          <!-- img -->
+          <Image
+            src={profileImg}
+            alt="Harindra With Suit"
+            class="w-52 h-52 rounded-full object-cover shadow-lg"
+          />
 
-        <!-- name -->
-        <h1 class="text-4xl font-bold text-white mt-3">
-          Harindra Wahyu Arifudin
-        </h1>
-        <p class="text-center text-lg text-[#a0a0a0]">
-          Full Stack Web Developer
-        </p>
-      </div>
-
-      <section class="max-w-prose">
-        <p class="text-lg text-gray-300 leading-relaxed">
-          Hello! I'm Indra, a passionate UI Designer and Front-End Web Developer
-          based in Indonesia. I love bringing beautiful designs to life with
-          clean and efficient code. My journey in the tech world started with a
-          curiosity for how things work, which quickly turned into a love for
-          building user-friendly and visually appealing web experiences.
-        </p>
-        <p class="text-lg text-gray-300 leading-relaxed mt-4">
-          When I'm not coding or designing, I enjoy exploring new technologies,
-          playing video games, and spending time in nature. I believe the best
-          products are a blend of great design and solid engineering, and I'm
-          always eager to learn and grow in both fields.
-        </p>
-      </section>
-
-      <section class="w-full">
-        <h2 class="text-3xl font-bold mb-6 mt-15 text-white">My Skills</h2>
-        <div
-          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
+          <!-- name -->
+          <h1 class="text-4xl font-bold text-white mt-3">
+            Harindra Wahyu Arifudin
+          </h1>
+          <p class="text-center text-lg text-[#a0a0a0]">
+            Full Stack Web Developer
+          </p>
         </div>
-      </section>
-    </div>
+
+        <section class="max-w-prose">
+          <p class="text-lg text-gray-300 leading-relaxed">
+            Hello! I'm Indra, a passionate UI Designer and Front-End Web
+            Developer based in Indonesia. I love bringing beautiful designs to
+            life with clean and efficient code. My journey in the tech world
+            started with a curiosity for how things work, which quickly turned
+            into a love for building user-friendly and visually appealing web
+            experiences.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed mt-4">
+            When I'm not coding or designing, I enjoy exploring new
+            technologies, playing video games, and spending time in nature. I
+            believe the best products are a blend of great design and solid
+            engineering, and I'm always eager to learn and grow in both fields.
+          </p>
+        </section>
+
+        <section class="w-full">
+          <h2 class="text-3xl font-bold mb-6 mt-15 text-white">My Skills</h2>
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
+          </div>
+        </section>
+      </div>
+    </TerminalPanel>
   </main>
-  <Footer />
-  <!-- <Floor /> -->
 </MainLayout>

@@ -1,0 +1,58 @@
+---
+const isActive = (path: string) => {
+  const current = Astro.url.pathname;
+  if (path === "/") {
+    return current === "/" || current === "";
+  }
+  return current.startsWith(path);
+};
+---
+
+<!-- Mobile Nav -->
+<div></div>
+<nav
+  id="mobile-nav"
+  class="fixed top-10 left-0 right-0 font-light bg-(--bg-main) p-6 md:hidden rounded-b-xl transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none">
+  <ul class="flex flex-col gap-6 text-2xl">
+    <li>
+      <a
+        class:list={[
+          { "text-(--text-accent-yellow)": isActive("/") },
+          { "text-(--text-muted)": !isActive("/") },
+        ]}
+        href="/"
+        id="mobile-link-home">Home</a
+      >
+    </li>
+    <li>
+      <a
+        class:list={[
+          { "text-(--text-accent-yellow)": isActive("/about") },
+          { "text-(--text-muted)": !isActive("/about") },
+        ]}
+        href="/about"
+        id="mobile-link-about">About</a
+      >
+    </li>
+    <li>
+      <a
+        class:list={[
+          { "text-(--text-accent-yellow)": isActive("/project") },
+          { "text-(--text-muted)": !isActive("/project") },
+        ]}
+        href="/project"
+        id="mobile-link-project">Project</a
+      >
+    </li>
+    <li>
+      <a
+        class:list={[
+          { "text-(--text-accent-yellow)": isActive("/contact") },
+          { "text-(--text-muted)": !isActive("/contact") },
+        ]}
+        href="/contact"
+        id="mobile-link-contact">Contact</a
+      >
+    </li>
+  </ul>
+</nav>
