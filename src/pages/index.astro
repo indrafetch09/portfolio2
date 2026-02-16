@@ -1,19 +1,17 @@
 ---
-// import { Navbar } from "../components/Navbar";
 import Navbar from "../components/Navbar.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import TerminalPanel from "../components/TerminalPanel.astro";
 import Floor from "../components/Floor.astro";
 ---
 
 <MainLayout title="Harindra Wahyu" , description="This is home page">
   <Floor class="absolute inset-0 z-0" />
   <Navbar />
-  <main class="h-screen flex flex-col items-center justify-center py-20">
-    <TerminalPanel>
-      <div
-        class="self-center h-full flex flex-col items-center justify-content-center">
-        <div class="text-center mb-2">
+  <main class="h-screen relative justify-content-center py-15 px-15">
+    <div
+      class="terminal-panel relative items-center h-130 max-w-7xl p-10 border-3 rounded-lg border-(--border) bg-(--bg-panel) shadow-xl/10">
+      <div class="self-center h-full flex flex-col">
+        <div class="mb-2">
           <span
             id="typed"
             class="text-(--text-main) text-2xl sm:text-xl md:text-2xl mb-4">
@@ -21,9 +19,9 @@ import Floor from "../components/Floor.astro";
         </div>
 
         <h1
-          class="flex text-center font-bold text-(--text-main) text-3xl sm:text-5xl">
+          class="flex text-center font-bold text-(--text-main) text-2xl sm:text-4xl">
           <span
-            class="flex sm:text-5xl font-light text-(--text-accent-green) pr-3">
+            class="flex sm:text-2xl font-light text-(--text-accent-green) pr-3">
             I'm
           </span>
           Harindra Wahyu
@@ -33,17 +31,17 @@ import Floor from "../components/Floor.astro";
           Full Stack Web Developer.
         </p>
       </div>
+    </div>
 
-      <script>
-        import Typed from "typed.js";
+    <script>
+      import Typed from "typed.js";
 
-        new Typed("#typed", {
-          strings: ["Assalamu'alaiakum,", "Hola,", "Hello,", "こんにちは,"],
-          typeSpeed: 30,
-          backSpeed: 50,
-          loop: true,
-        });
-      </script>
-    </TerminalPanel>
+      new Typed("#typed", {
+        strings: ["Assalamu'alaiakum,", "Hola,", "Hello,", "こんにちは,"],
+        typeSpeed: 30,
+        backSpeed: 50,
+        loop: true,
+      });
+    </script>
   </main>
 </MainLayout>
