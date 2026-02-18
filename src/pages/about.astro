@@ -5,14 +5,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Footer from "../components/Footer.astro";
 import Floor from "../components/Floor.astro";
 import TerminalPanel from "../components/TerminalPanel.astro";
-import profileImg from "../assets/Indra.webp";
+import profileImg from "./public/assets/Indra.webp";
 ---
 
 <MainLayout title="About | Harindra Wahyu" , description="This is resume page">
   <Navbar />
   <Floor />
-  <main
-    class="container flex mx-auto py-15 px-15 h-screen justify-center items-center">
+  <main class="relative pt-20 px-20 justify-center items-center">
     <TerminalPanel>
       <div
         class="flex flex-col items-center justify-center text-center overflow-y-auto scroll-thin h-full space-y-8">

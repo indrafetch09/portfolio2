@@ -2,14 +2,14 @@
 import Navbar from "../components/Navbar.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Floor from "../components/Floor.astro";
+import TerminalPanel from "../components/TerminalPanel.astro";
 ---
 
 <MainLayout title="Harindra Wahyu" , description="This is home page">
   <Floor class="absolute inset-0 z-0" />
   <Navbar />
-  <main class="h-screen relative justify-content-center py-15 px-15">
-    <div
-      class="terminal-panel items-center h-130 max-w-7xl p-8 border-3 rounded-lg border-(--border) bg-(--bg-panel) shadow-xl/10">
+  <main class="relative justify-content-center pt-20 px-10">
+    <TerminalPanel>
       <div class="self-center text-l font-light">
         <div class="head-cmd">
           <span class="text-(--text-accent-green)">@</span>
@@ -25,7 +25,7 @@ import Floor from "../components/Floor.astro";
           Full Stack Web Developer.
         </p>
       </div>
-    </div>
+    </TerminalPanel>
   </main>
 
   <script>
