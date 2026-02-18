@@ -38,24 +38,7 @@ body {
 
 }
 
-#typed {
-  font-family: Inter, monospace;
-}
-
-@media (max-width: 700px){
-  .container {
-  max-width: 700px;
-  }
-
-}
-
-@media (min-width: 640px){
-  .container {
-  max-width: 640px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-
-  }
-
-}
-
+.body-cmd {
+  margin-top: 20px;
+  margin-left: 30px;
+}   

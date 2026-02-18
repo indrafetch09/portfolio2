@@ -9,38 +9,33 @@ import Floor from "../components/Floor.astro";
   <Navbar />
   <main class="h-screen relative justify-content-center py-15 px-15">
     <div
-      class="terminal-panel relative items-center h-130 max-w-7xl p-10 border-3 rounded-lg border-(--border) bg-(--bg-panel) shadow-xl/10">
-      <div class="self-center h-full flex flex-col">
-        <div class="mb-2">
-          <span class="text-(--text-main) text-2xl sm:text-xl md:text-2xl mb-4">
-            @
-          </span>
+      class="terminal-panel items-center h-130 max-w-7xl p-8 border-3 rounded-lg border-(--border) bg-(--bg-panel) shadow-xl/10">
+      <div class="self-center text-l font-light">
+        <div class="head-cmd">
+          <span class="text-(--text-accent-green)">@</span>
+          <span class="text-(--text-main)">rxfetch </span>
         </div>
-
-        <h1
-          class="flex text-center font-bold text-(--text-main) text-2xl sm:text-4xl">
-          <span
-            class="flex sm:text-2xl font-light text-(--text-accent-green) pr-3">
-            I'm
-          </span>
+      </div>
+      <div class="body-cmd">
+        <span class="font-bold text-(--text-accent-green) pr-3">i am </span>
+        <h1 class="font-bold text-(--text-main) text-6xl sm:text-4xl">
           Harindra Wahyu
         </h1>
-
-        <p class="flex mt-2 text-center text-lg text-(--text-accent-purple)">
+        <p class="text-lg text-(--text-accent-purple)">
           Full Stack Web Developer.
         </p>
       </div>
     </div>
-
-    <script>
-      import Typed from "typed.js";
-
-      new Typed("#typed", {
-        strings: ["Assalamu'alaiakum,", "Hola,", "Hello,", "こんにちは,"],
-        typeSpeed: 30,
-        backSpeed: 50,
-        loop: true,
-      });
-    </script>
   </main>
+
+  <script>
+    import Typed from "typed.js";
+
+    new Typed("#typed", {
+      strings: ["Assalamu'alaiakum,", "Hola,", "Hello,", "こんにちは,"],
+      typeSpeed: 30,
+      backSpeed: 50,
+      loop: true,
+    });
+  </script>
 </MainLayout>
