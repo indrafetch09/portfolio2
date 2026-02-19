@@ -16,13 +16,13 @@ const HeadCmd = () => {
                         <span class="accent-red"> main</span>
                     </div>
                     <p>via</p>
-                    <div class="flex text-sm gap-1">
-                        <FaGithub className="accent-green" />
-                        <a href="https://github.com/indrafetch09" class="accent-green">
+                    <div class="flex text-sm gap-1 ubderline accent-green">
+                        <FaGithub className="" />
+                        <a className="underline" href="https://github.com/indrafetch09">
                             indrafetch09
                         </a>
                     </div>
-                    <p>&copy; Copyright 2026</p>
+                    <p className="text-sm ">&copy;-2026-Copyright</p>
                 </div>
             </div>
             <div class="flex text-sm gap-2">
