@@ -22,7 +22,7 @@
   --text-accent-green: #a4bd7e;
   --text-accent-purple: #a47497;
   --text-accent-blue: #4a7773;
-  --text-accent-tosca: #7b9f8a;
+  --text-accent-tosca: #689475;
   --text-accent-yellow: #cbb68b;
   --text-accent-red: #ca7777;
   --text-muted: #666960;
@@ -38,7 +38,16 @@ body {
 
 }
 
+.accent-green {
+  color: var(--text-accent-green)
+}
+
+.accent-red {
+  color: var(--text-accent-red);
+}
+
 .body-cmd {
   margin-top: 20px;
   margin-left: 30px;
+  
 }   

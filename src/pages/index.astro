@@ -3,21 +3,16 @@ import Navbar from "../components/Navbar.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Floor from "../components/Floor.astro";
 import TerminalPanel from "../components/TerminalPanel.astro";
+import HeadCmd from "../components/HeadCmd.jsx";
 ---
 
 <MainLayout title="Harindra Wahyu" , description="This is home page">
   <Floor class="absolute inset-0 z-0" />
   <Navbar />
-  <main class="relative justify-content-center pt-20 px-10">
+  <main class="relative justify-content-center pt-20 px-20">
     <TerminalPanel>
-      <div class="self-center text-l font-light">
-        <div class="head-cmd">
-          <span class="text-(--text-accent-green)">@</span>
-          <span class="text-(--text-main)">rxfetch </span>
-        </div>
-      </div>
+      <HeadCmd client:load />
       <div class="body-cmd">
-        <span class="font-bold text-(--text-accent-green) pr-3">i am </span>
         <h1 class="font-bold text-(--text-main) text-6xl sm:text-4xl">
           Harindra Wahyu
         </h1>
@@ -27,15 +22,4 @@ import TerminalPanel from "../components/TerminalPanel.astro";
       </div>
     </TerminalPanel>
   </main>
-
-  <script>
-    import Typed from "typed.js";
-
-    new Typed("#typed", {
-      strings: ["Assalamu'alaiakum,", "Hola,", "Hello,", "こんにちは,"],
-      typeSpeed: 30,
-      backSpeed: 50,
-      loop: true,
-    });
-  </script>
 </MainLayout>
