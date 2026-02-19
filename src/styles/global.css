@@ -7,21 +7,20 @@
   --bg-panel: #2f383e;
   --bg-hover: #20262a;
 
-  --border: #888373;
+  --border-main: #888373;
   --border-active: #79a8a2;
 
   --hover-muted: #888373;
 
-  --accent: #a4bd7e;
+  --accent-main: #a4bd7e;
   --accent-soft: #98af78;
   --accent-muted: #7f8f6a;
   
   --text-main: #c7baa1;
-  --text-secondary: #b8c0a0;
 
   --text-accent-green: #a4bd7e;
   --text-accent-purple: #ab7e95;
-  --text-accent-blue: #4a7773;
+  --text-accent-blue: #7ab0a9;
   --text-accent-tosca: #689475;
   --text-accent-yellow: #cbb68b;
   --text-accent-red: #ca7777;
@@ -38,16 +37,84 @@ body {
 
 }
 
-.accent-green {
-  color: var(--text-accent-green)
-}
-
-.accent-red {
-  color: var(--text-accent-red);
-}
-
 .body-cmd {
   margin-top: 20px;
   margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
+}
+
+/* Background color classes */
+.bg-main {
+  background-color: var(--bg-main);
+}
+
+.bg-panel {
+  background-color: var(--bg-panel);
+}
+
+.bg-hover {
+  background-color: var(--bg-hover);
+}
+
+/* Border color classes */
+.border-main {
+  border-color: var(--border-main);
+}
+
+.border-active {
+  border-color: var(--border-active);
+}
+
+/* Text color classes */
+.text-main {
+  color: var(--text-main);
+}
+
+.text-accent-green {
+  color: var(--text-accent-green);
+}
+
+.text-accent-purple {
+  color: var(--text-accent-purple);
+}
+
+.text-accent-blue {
+  color: var(--text-accent-blue);
+}
+
+.text-accent-tosca {
+  color: var(--text-accent-tosca);
+}
+
+.text-accent-yellow {
+  color: var(--text-accent-yellow);
+}
+
+.text-accent-red {
+  color: var(--text-accent-red);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Accent color classes */
+.accent-main {
+  color: var(--accent-main);
+}
+
+.accent-soft {
+  color: var(--accent-soft);
+}
+
+.accent-muted {
+  color: var(--accent-muted);
+}
+
+/* Hover muted class */
+.hover-muted {
+  color: var(--hover-muted);
 }   

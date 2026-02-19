@@ -7,19 +7,19 @@ import HeadCmd from "../components/HeadCmd.jsx";
 ---
 
 <MainLayout title="Harindra Wahyu" , description="This is home page">
-  <Floor class="absolute inset-0 z-0" />
+  <Floor />
   <Navbar />
-  <main class="relative justify-content-center pt-20 px-5">
-    <TerminalPanel>
-      <HeadCmd client:load />
-      <div class="body-cmd">
-        <h1 class="font-bold text-(--text-main) text-6xl sm:text-4xl">
-          Harindra Wahyu
-        </h1>
-        <p class="text-lg text-(--text-accent-purple)">
-          Full Stack Web Developer.
-        </p>
+  <TerminalPanel>
+    <HeadCmd client:load />
+    <div class="body-cmd gap-2">
+      <div class="flex gap-5">
+        <span class="text-accent-purple text-lg font-bold">name</span>
+        <h1 class="font-bold text-main text-6xl sm:text-4xl">Harindra Wahyu</h1>
       </div>
-    </TerminalPanel>
-  </main>
+      <div class="flex gap-5">
+        <span class="text-accent-blue text-lg font-bold">role</span>
+        <p class="text-lg text-main font-bold">Full Stack Web Developer.</p>
+      </div>
+    </div>
+  </TerminalPanel>
 </MainLayout>
