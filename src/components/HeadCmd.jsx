@@ -1,4 +1,4 @@
-import { IoGitBranch } from "react-icons/io5";
+import { IoMdGitBranch } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 
 const HeadCmd = () => {
@@ -12,7 +12,7 @@ const HeadCmd = () => {
                 <div className="flex gap-2 text-sm font-bold text-main">
                     <span className="font-normal">on</span>
                     <div class="flex gap-1 text-accent-purple">
-                        <IoGitBranch />
+                        <IoMdGitBranch />
                         <span >main</span>
                     </div>
                     <span className="font-normal">via</span>
