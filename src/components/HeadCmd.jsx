@@ -1,5 +1,6 @@
 import { IoMdGitBranch } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import Typewriter from "typewriter-effect";
 
 const HeadCmd = () => {
     return (
@@ -26,7 +27,7 @@ const HeadCmd = () => {
                 </div>
             </div>
             <div class="flex text-sm gap-2">
-                <span class="font-bold text-(--text-accent-green)">@</span>
+                <span class="font-bold text-accent-green">@</span>
                 <span class="text-(--text-main)">show profile -c</span>
             </div>
         </>
