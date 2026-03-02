@@ -7,33 +7,14 @@ import Floor from "../components/Floor.astro";
 import TerminalPanel from "../components/TerminalPanel.astro";
 import profileImg from "./public/assets/Indra.webp";
 import HeadCmd from "../components/HeadCmd";
+
+const { pathname } = Astro.url;
 ---
 
 <MainLayout title="About | Harindra Wahyu" , description="This is resume page">
   <Navbar />
   <Floor />
   <TerminalPanel>
-    <HeadCmd client:load />
-    <div
-      class="flex flex-col items-center justify-center text-center overflow-y-auto scroll-thin h-full">
-      <div class="flex flex-col items-center space-y-4">
-        <!-- img -->
-        <Image
-          src={profileImg}
-          alt="Harindra With Suit"
-          class="w-52 h-52 rounded-full object-cover shadow-lg"
-        />
-
-        <!-- name -->
-        <h1 class="text-4xl font-bold text-white mt-3">
-          Harindra Wahyu Arifudin
-        </h1>
-        <p class="text-center text-lg text-[#a0a0a0]">
-          Full Stack Web Developer
-        </p>
-      </div>
-
-      <section class="max-w-prose"></section>
-    </div>
+    <HeadCmd pathname={pathname} client:load />
   </TerminalPanel>
 </MainLayout>

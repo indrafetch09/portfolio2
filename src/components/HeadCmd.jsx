@@ -1,7 +1,16 @@
 import { IoMdGitBranch } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 
-const HeadCmd = () => {
+const routeCommands = {
+    "/": "show profile -c",
+    "/projects": "show project --all",
+    "/about": "show about --verbose",
+    "/contact": "show contact -c",
+
+}
+
+const HeadCmd = ({ pathname }) => {
+    const command = routeCommands[ pathname ] ?? `show ${pathname.replace("/", "")} -c`;
     return (
         <>
             {/* head */}
@@ -31,7 +40,7 @@ const HeadCmd = () => {
             {/* Only shown on mobile */}
             <div class="flex text-sm gap-2">
                 <span class="font-bold text-accent-green">@</span>
-                <span class="text-(--text-main)">show profile -c</span>
+                <span class="text-(--text-main)">{command}</span>
             </div>
         </>
     );

@@ -4,13 +4,15 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Floor from "../components/Floor.astro";
 import TerminalPanel from "../components/TerminalPanel.astro";
 import HeadCmd from "../components/HeadCmd.jsx";
+
+const { pathname } = Astro.url;
 ---
 
 <MainLayout title="Harindra Wahyu" , description="This is home page">
   <Floor />
   <Navbar />
   <TerminalPanel>
-    <HeadCmd client:load />
+    <HeadCmd pathname={pathname} client:load />
     <div class="body-cmd gap-2">
       <div class="flex gap-3">
         <span class="text-accent-purple text-lg font-bold">name</span>
