@@ -1,139 +1,154 @@
 @import "tailwindcss";
 
 :root {
-  @import "https://www.nerdfonts.com/assets/css/webfont.css";
- 
-  --bg-main: #2d353b;
-  --bg-panel: #2f383e;
-  --bg-hover: #20262a;
+    @import "https://www.nerdfonts.com/assets/css/webfont.css";
 
-  --border-main: #888373;
-  --border-active: #79a8a2;
+    --bg-main: #2d353b;
+    --bg-panel: #2f383e;
+    --bg-hover: #20262a;
 
-  --hover-muted: #888373;
+    --border-main: #888373;
+    --border-active: #79a8a2;
 
-  --accent-main: #a4bd7e;
-  --accent-soft: #98af78;
-  --accent-muted: #7f8f6a;
-  
-  --text-main: #c7baa1;
+    --hover-muted: #888373;
 
-  --text-accent-green: #a4bd7e;
-  --text-accent-purple: #ab7e95;
-  --text-accent-blue: #7ab0a9;
-  --text-accent-tosca: #689475;
-  --text-accent-yellow: #cbb68b;
-  --text-accent-red: #ca7777;
-  --text-muted: #666960;
+    --accent-main: #a4bd7e;
+    --accent-soft: #98af78;
+    --accent-muted: #7f8f6a;
+
+    --text-main: #c7baa1;
+
+    --text-accent-green: #a4bd7e;
+    --text-accent-purple: #ab7e95;
+    --text-accent-blue: #7ab0a9;
+    --text-accent-tosca: #689475;
+    --text-accent-yellow: #cbb68b;
+    --text-accent-red: #ca7777;
+    --text-muted: #666960;
 }
 
 body {
-  font-family: "JetBrains Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 
-  background-color: var(--bg-main);
+    background-color: var(--bg-main);
+}
 
+body {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: var(--bg-main);
+}
+
+body {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: var(--bg-main);
 }
 
 #navbar-header {
-  animation: anime 0.5s ease forwards;
-  width: 100%;
-  
+    animation: anime 0.5s ease forwards;
+    width: 100%;
+    justify-content: center;
 }
 
 @keyframes anime {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -40px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -0px)
-  }
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -0px);
+    }
 }
 
 .body-cmd {
-  margin-top: 20px;
-  flex-direction: row;
-  
+    margin-top: 20px;
+    flex-direction: row;
 }
 
 /* Background color classes */
 .bg-main {
-  background-color: var(--bg-main);
+    background-color: var(--bg-main);
 }
 
 .bg-panel {
-  background-color: var(--bg-panel);
+    background-color: var(--bg-panel);
 }
 
 .bg-hover {
-  background-color: var(--bg-hover);
+    background-color: var(--bg-hover);
 }
 
 /* Border color classes */
 .border-main {
-  border-color: var(--border-main);
+    border-color: var(--border-main);
 }
 
 .border-active {
-  border-color: var(--border-active);
+    border-color: var(--border-active);
 }
 
 /* Text color classes */
 .text-main {
-  color: var(--text-main);
+    color: var(--text-main);
 }
 
 .text-accent-green {
-  color: var(--text-accent-green);
+    color: var(--text-accent-green);
 }
 
 .text-accent-purple {
-  color: var(--text-accent-purple);
+    color: var(--text-accent-purple);
 }
 
 .text-accent-blue {
-  color: var(--text-accent-blue);
+    color: var(--text-accent-blue);
 }
 
 .text-accent-tosca {
-  color: var(--text-accent-tosca);
+    color: var(--text-accent-tosca);
 }
 
 .text-accent-yellow {
-  color: var(--text-accent-yellow);
+    color: var(--text-accent-yellow);
 }
 
 .text-accent-red {
-  color: var(--text-accent-red);
+    color: var(--text-accent-red);
 }
 
 .text-muted {
-  color: var(--text-muted);
+    color: var(--text-muted);
 }
 
 /* Accent color classes */
 .accent-main {
-  color: var(--accent-main);
+    color: var(--accent-main);
 }
 
 .accent-soft {
-  color: var(--accent-soft);
+    color: var(--accent-soft);
 }
 
 .accent-muted {
-  color: var(--accent-muted);
+    color: var(--accent-muted);
 }
 
 /* Hover muted class */
 .hover-muted {
-  color: var(--hover-muted);
-}   
-
+    color: var(--hover-muted);
+}
 
 .kaiden {
-  color: var(--text-main);
+    color: var(--text-main);
 }
