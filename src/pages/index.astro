@@ -10,21 +10,13 @@ const { pathname } = Astro.url;
 ---
 
 <MainLayout title="Harindra Wahyu" , description="This is home page">
-  <Floor />
-  <Navbar />
-  <TerminalPanel>
-    <HeadCmd pathname={pathname} client:load />
-    <div class="body-cmd gap-2">
-      <!-- ASCII art -->
-      <ASCII />
-      <!-- <div class="flex gap-3">
-        <span class="text-accent-purple text-lg font-bold">name</span>
-        <h1 class="text-lg text-main font-bold">Harindra Wahyu Arifudin</h1>
-      </div>
-      <div class="flex gap-3">
-        <span class="text-accent-blue text-lg font-bold">role</span>
-        <p class="text-lg text-main font-bold">Full Stack Web Developer.</p>
-      </div> -->
-    </div>
-  </TerminalPanel>
+    <Floor />
+    <Navbar />
+    <TerminalPanel>
+        <HeadCmd pathname={pathname} client:load />
+        <div class="body-cmd gap-2">
+            <!-- ASCII art -->
+            <ASCII />
+        </div>
+    </TerminalPanel>
 </MainLayout>
